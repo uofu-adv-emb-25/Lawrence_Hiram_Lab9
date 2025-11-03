@@ -6,3 +6,11 @@
 
 // Varying Invariants
 With the following PDF example in the lab README.md, during the ringing, arms_up state, there is a case in which the opposite direction approaches while the the other train is departing, there is a safety hazard, because a train is approaching and there is no alarm of lowered barriers.
+
+
+// Check your work
+Hiram's FSM:
+We found that this FSM faces the same issue as example FSM, looking above to see hazard.
+
+Lawrence's FSM:
+Unable to find hazard condition in FSM
