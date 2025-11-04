@@ -23,7 +23,7 @@ Unable to find hazard condition in FSM
 | 1      | 0         | 0        | 0                  | 1                  |     17, 18     |                |              |              |         |               |
 | 2      | 0         | 0        | 1                  | 0                  |      17, 18    |                |              |              |         |               |
 | 3      | 0         | 0        | 1                  | 1                  |      17, 18          |                |              |              |         |               |
-| 4      | 0         | 1        | 0                  | 0                  |               |                |              |              |         |               |
+| 4      | 0         | 1        | 0                  | 0                  |        19       |                |              |              |         |               |
 | 5      | 0         | 1        | 0                  | 1                  |               |                |              |              |         |               |
 | 6      | 0         | 1        | 1                  | 0                  |               |                |              |              |         |               |
 | 7      | 0         | 1        | 1                  | 1                  |               |                |              |              |         |               |
@@ -41,7 +41,7 @@ Unable to find hazard condition in FSM
 | 16     |    Approach will proceed with a depart       |
 | 17     |       Train present, no barrier    |
 | 18     |       Train present, no alarm    |
-| 19     |           |
+| 19     |       Alarm is only on if there is a train present   |
 | 20     |           |
 | 21     |           |
 | 22     |           |
