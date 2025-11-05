@@ -17,35 +17,32 @@ Unable to find hazard condition in FSM
 
 // Prove it
 
-| number | arms_down | alarm_on | northbound_present | southbound_present | north_approach | south_approach | north_depart | south_depart | ringing | safety_hazard |
-|--------|-----------|----------|--------------------|--------------------|----------------|----------------|--------------|--------------|---------|---------------|
-| 0      | 0         | 0        | 0                  | 0                  |       6        |       5         |       14       |      13        |         |               |
-| 1      | 0         | 0        | 0                  | 1                  |     x     |        x        |              |              |         |               |
-| 2      | 0         | 0        | 1                  | 0                  |      x    |         x       |              |              |         |               |
-| 3      | 0         | 0        | 1                  | 1                  |      x          |        x        |              |              |         |               |
-| 4      | 0         | 1        | 0                  | 0                  |       x       |       x         |              |              |         |               |
-| 5      | 0         | 1        | 0                  | 1                  |      x        |        x        |              |              |         |               |
-| 6      | 0         | 1        | 1                  | 0                  |     x          |        x        |              |              |         |               |
-| 7      | 0         | 1        | 1                  | 1                  |      x        |        x        |              |              |         |               |
-| 8      | 1         | 0        | 0                  | 0                  |       x        |        x        |              |              |         |               |
-| 9      | 1         | 0        | 0                  | 1                  |       x       |        x        |              |              |         |               |
-| 10     | 1         | 0        | 1                  | 0                  |       x       |         x       |              |              |         |               |
-| 11     | 1         | 0        | 1                  | 1                  |       x       |         x       |              |              |         |               |
-| 12     | 1         | 1        | 0                  | 0                  |        14      |         13       |              |              |         |               |
-| 13     | 1         | 1        | 0                  | 1                  |        15      |         13       |              |              |         |               |
-| 14     | 1         | 1        | 1                  | 0                  |        14      |         15       |              |              |         |               |
-| 15     | 1         | 1        | 1                  | 1                  |        15      |        15        |              |              |         |               |
+| number | arms_down | alarm_on | northbound_present | southbound_present | north_approach | south_approach | north_depart | south_depart | ringing      | safety_hazard |
+| ------ | --------- | -------- | ------------------ | ------------------ | -------------- | -------------- | ------------ | ------------ | ------------ | ------------- |
+| 0      | 0         | 0        | 0                  | 0                  | 6              | 5              | 21           | 21           | x            | 21            |
+| 1      | 0         | 0        | 0                  | 1                  | x              | 18             | x            | 18, 20       | x            | 18, 20        |
+| 2      | 0         | 0        | 1                  | 0                  | 18             | x              | 18, 20       | x            | x            | 18, 20        |
+| 3      | 0         | 0        | 1                  | 1                  | 18             | 18             | 18, 20       | 18, 20       | x            | 18, 20        |
+| 4      | 0         | 1        | 0                  | 0                  | x              | x              | x            | x            | x            |               |
+| 5      | 0         | 1        | 0                  | 1                  | 7              | 5              | x            | 13           | time elasped |               |
+| 6      | 0         | 1        | 1                  | 0                  | 6              | 7              | 14           | x            | time elasped |               |
+| 7      | 0         | 1        | 1                  | 1                  | 7              | 7              | 15           | 15           | time elasped |               |
+| 8      | 1         | 0        | 0                  | 0                  | x              | x              | x            | x            | x            |               |
+| 9      | 1         | 0        | 0                  | 1                  | x              | x              | x            | 18, 20       | x            | 18, 20        |
+| 10     | 1         | 0        | 1                  | 0                  | x              | x              | 18, 20       | x            | x            | 18, 20        |
+| 11     | 1         | 0        | 1                  | 1                  | x              | x              | 18, 20       | 18, 20       | x            | 18, 20        |
+| 12     | 1         | 1        | 0                  | 0                  | x              | x              | x            | x            | x            |               |
+| 13     | 1         | 1        | 0                  | 1                  | 14,15          | 13             | x            | 0            | time elasped |               |
+| 14     | 1         | 1        | 1                  | 0                  | 14             | 15             | 0            | x            | time elasped |               |
+| 15     | 1         | 1        | 1                  | 1                  | 15             | 15             | 13           | 14           | time elasped |               |
 
-| number | invariant |
-|--------|-----------|
-| 16     |    Approach will proceed with a depart       |
-| 17     |       Train present, no barrier    |
-| 18     |       Train present, no alarm    |
-| 19     |       Alarm is only on if there is a train present   |
-| 20     |       Arms down only if there is a alarm    |
-| 21     |           |
-| 22     |           |
-| 23     |           |
-| 24     |           |
-| 25     |           |
+| number | invariant                                             |
+| ------ | ----------------------------------------------------- |
+| 16     | Approach will proceed with a depart                   |
+| 17     | Train present, no barrier                             |
+| 18     | Train present, no alarm                               |
+| 19     | Alarm is only on if there is a train present          |
+| 20     | Arms down only if there is a alarm                    |
+| 21     | Train departs, barrier should be down and alarm is on |
+
 
