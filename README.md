@@ -46,3 +46,6 @@ Unable to find hazard condition in FSM
 | 21     | Train departs, barrier should be down and alarm is on |
 
 ![ECE5785_Lab09FSM](https://github.com/user-attachments/assets/e136199b-7952-4426-a075-a04e4186e73e)
+
+
+Our new FSM isn't equivalent to the previous FSM. Furthemore, as mentioned the previously FSM has safety harazards as Hirams, whereas the new FSM seems to ridden of them. 
