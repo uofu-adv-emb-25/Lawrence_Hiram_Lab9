@@ -45,3 +45,4 @@ Unable to find hazard condition in FSM
 | 20     | Arms down only if there is a alarm                    |
 | 21     | Train departs, barrier should be down and alarm is on |
 
+![ECE5785_Lab09FSM](https://github.com/user-attachments/assets/e136199b-7952-4426-a075-a04e4186e73e)
